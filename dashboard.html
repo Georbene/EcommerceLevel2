@@ -1,0 +1,447 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body{
+        overflow-x: hidden;
+    }
+    .logo {
+        margin-left: 40px;
+    }
+    .collapse{
+        margin-left: 260px;
+    }
+    .btn{
+        border: 2px solid black;
+        margin-right: 30px;
+        font-weight: 800;
+    }
+    .title{
+        padding: 10px;
+        font-weight: 700;
+    }
+    .des{
+        font-size: 15px;
+        margin-top: -20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .add{
+        border: 1.5px solid black;
+        margin-left: 10px;
+        font-weight: 600;
+        width: 80%;
+        margin-top: -20px;
+        margin-bottom: 35px;
+
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left:25px;
+    }
+    @media screen and (max-width: 995px)  {
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media screen and (max-width: 755px) {
+        .products{
+            display: block;
+        }
+        .title{
+            font-size: 23px;
+        }
+        .des{
+            font-weight: 400;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="navbar-brand" href="#">
+            <div class="logo">
+              <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 3691.34 813.39" width="30%" height="10vh">
+                  <style>
+                      .st0{fill:#090b17}
+                    </style>
+                    <path class="st0" d="M319.36 148.98l221.39 128.86c35.78 20.82 57.81 59.08 57.87 100.47l.63 435.08 265.24-148.98V232.27c0-41.54-22.13-79.93-58.07-100.76L579.43 0 319.36 148.98z"></path>
+                    <path class="st0" d="M545.13 664.41l-221.4-128.86c-35.78-20.82-57.81-59.08-57.87-100.47L265.24 0 0 148.98v432.14c0 41.54 22.13 79.93 58.07 100.76L285.06 813.4l260.07-148.99zM2170.82 481.94c0 146.88-106.26 253.89-246.96 253.89s-246.96-107-246.96-253.89c0-147.85 106.26-253.89 246.96-253.89 140.7.01 246.96 106.04 246.96 253.89zm-127.31 0c0-90.46-57.44-136.19-119.65-136.19-62.21 0-119.65 45.73-119.65 136.19 0 89.49 57.44 136.19 119.65 136.19 62.21 0 119.65-45.73 119.65-136.19zM2719.58 481.94c0 146.88-106.26 253.89-246.96 253.89s-246.96-107-246.96-253.89c0-147.85 106.26-253.89 246.96-253.89s246.96 106.04 246.96 253.89zm-127.31 0c0-90.46-57.44-136.19-119.65-136.19s-119.65 45.73-119.65 136.19c0 89.49 57.44 136.19 119.65 136.19s119.65-45.73 119.65-136.19zM1197.64 722.19V77.55h134.5v515.98h307.98v128.66h-442.48zM3060.64 444.43l195.91 277.76h-158.87l-126.71-183.22-53.6 56.52V722.2h-129.63V77.55h129.63v343.47l165.68-178.35h169.59l-192 201.76zM3404.8 446.37l117.94-17.54c27.29-3.89 36.05-17.54 36.05-34.1 0-34.12-26.31-62.38-80.89-62.38-56.53 0-87.71 17.64-91.62 59.55l-117.15 1.52c7.8-75.05 79.14-165.37 207.78-165.37 152.04 0 208.58 85.76 208.58 182.25v235.87c0 25.34 2.92 59.44 5.84 76.01h-118.89c-2.94-12.67-4.87-38.99-4.87-57.5-24.37 38.01-70.17 71.14-141.33 71.14-102.34 0-164.71-69.19-164.71-144.23 0-85.77 63.35-133.52 143.27-145.22zm153.99 81.87V506.8l-108.18 16.56c-33.13 4.87-59.46 23.4-59.46 60.44 0 28.26 20.46 55.55 62.38 55.55 54.59 0 105.26-26.32 105.26-111.11z"></path>
+                </svg>
+            </div>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse con" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="font-weight: 700;">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" style="font-weight: 700;">ABOUT US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" style="font-weight: 700;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CATEGORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#bed">Beddings</a></li>
+                  <li><a class="dropdown-item" href="#chair">Chairs</a></li>
+                  <li><a class="dropdown-item" href="#Chandelier">Chandeliers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="font-weight: 700;" href="orders.html">All Orders</a>
+              </li>
+            </ul>
+            <div style="height: 8vh" class="d-flex">
+                <button style="border-radius: 10px; font-weight: 700; text-align: center; height: 7vh; width: 100px;" class="nav-item active btn"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg>  Cart</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="bed" class="products">
+        <div id="">
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/D/u/Duo-Blanc-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title" id="">Duo</p>
+            <p class="des" id="">Cotton Percale Bed Collection - Yves Delorme <br> from $300</p>
+            <button class="add" id=""><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/E/c/Eclipses-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Luciole</p>
+            <p class="des">Cotton Sateen Bed Collection -  Yves Delorme <br> from $500</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/T/r/Triomphe-C_leste-Lit-Ambiance_4.jpg" width="90%" alt="">
+            <p class="title">Triomphe</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $600</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/B/a/Batiste-Blanc-Lit-Ambiance_chromie.jpg" width="90%" alt="">
+            <p class="title">Batiste</p>
+            <p class="des">Cotton Batiste Percale Bed Collection - Yves Delorme <br> from $450</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/Y/D/YD_Originel_Glycine_Ambiance-chromie_3.jpg" width="90%" alt="">
+            <p class="title">Originel</p>
+            <p class="des">Linen Bed Collection - Yves Delorme <br> from $650</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/U/l/Ulysse-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Ulysse</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $1,200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/H/B/HB_AH24_MIDNIGHTFLOWERS_Lit_Ambiance.jpg" width="90%" alt="">
+            <p class="title">MIDNIGHTFLOWERS</p>
+            <p class="des">Cotton Sateen Bed Collection - BOSS Home <br> from $400</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/O/m/Ombr_e-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Ombree</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $750</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/L/_/L_gende-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Legende</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $750</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/T/u/Tuilerie-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Tuilerie</p>
+            <p class="des">Cotton Percale Bed  Collection - Yves Delorme Couture <br> from $1,500</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+     
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/P/i/Piano-Lit-Ambiance_42.jpg" width="90%" alt="">
+            <p class="title">Piano</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $1,500</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/R/_/R_gates-Or-Lit.jpg" width="90%" alt="">
+            <p class="title">Régatesgates</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $1,300 </p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button> 
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/H/B/HB_PE25_DOUBLEB_Lit_Ambiance_Large.jpg" width="90%" alt="">
+            <p class="title">Hibiscus</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $500 </p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>    
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/A/b/Abysses-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Abysses</p>
+            <p class="des">Cotton Sateen Bed Collection -Yves Delorme <br> from $2,700 </p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>    
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/C/o/Colbert_Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Colbert</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $1,500 </p> 
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>   
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/N/a/Nautilus-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Nautilus</p>
+            <p class="des">Cotton Sateen Bed Collection - Yves Delorme <br> from $2,500 </p>   
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button> 
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/o/l/olympe_lit-ambiance.jpg" width="90%" alt="">
+            <p class="title">Olympe</p>
+            <p class="des">Cotton Sateen Bed Collection -  Yves Delorme <br> from $2,700 </p>   
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button> 
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/L/u/Lully-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Lully</p>
+            <p class="des">Cotton Sateen Bed Collection -Yves Delorme <br> from $2,500 </p>  
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>  
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/R/i/Rivoli-Lit-Ambiance.jpg" width="90%" alt="">
+            <p class="title">Rivoli</p>
+            <p class="des">Cotton Sateen Bed Collection -Yves Delorme <br> from $2,700 </p>    
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://medias.yvesdelorme.com/media/catalog/product/cache/5/small_image/700x/9df78eab33525d08d6e5fb8d27136e95/H/B/HB_LOFT_MILK_LIT_3.jpg" width="90%" alt="">
+            <p class="title">Loft</p>
+            <p class="des">Cotton Sateen Bed Collection - BOSS Home <br>from $2,700 </p> 
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>   
+        </div>
+        
+      </section>
+      <section id="chair" class="products">
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/4_Seater_Square_Dining_Set_F.jpg?v=1737541088&width=600" width="90%" alt="">
+            <p class="title">4 Seater Square Dining Set</p>
+            <p class="des">Sophisticated Square Design - <br>    from $350</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/4_Seater_Square_Dining_Set.jpg?v=1737540577&width=600" width="90%" alt="">
+            <p class="title">4 Seater Square Dining Set</p>
+            <p class="des">Sophisticated Square Design - <br> from $400</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/WhatsAppImage2025-01-22at10.22.07.jpg?v=1737539672&width=600" width="90%" height="73%" alt="">
+            <p class="title">4 Seater Round Dining Set</p>
+            <p class="des">Sophisticated Round Design - <br> from $500</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/Modern_Dining_Table_Set_with_Six_Chairs.png?v=1733096798&width=600" width="90%" alt="">
+            <p class="title">Modern Dining Table Set with Six Chairs</p>
+            <p class="des">Sophisticated Round Design - <br> from $550</p>
+             <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/227589_1706012671.jpg?v=1715000749&width=400" width="90%" alt="">
+            <p class="title">Round Dining Table With 4 Chairs</p>
+            <p class="des">Sophisticated Round Design - <br> from $600</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/1_87b810a7-ee14-40b6-ad25-59a3142aaba1.jpg?v=1714988233&width=600" width="90%" alt="">
+            <p class="title">Durable Dining Chairs And Table - White</p>
+            <p class="des">Casual Dining Chairs - <br> from $300</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/1_3fbd4c13-1ce6-4abc-9d20-b8f66d376e09.jpg?v=1714986904&width=400" width="90%" alt="">
+            <p class="title">Dining Table & Leather Chair With Wood Leg(Set Of 4) White</p>
+            <p class="des">Casual Dining Chairs - <br> from $300</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/Orientalfauxmarblediningset.jpg?v=1720855175&width=400" width="90%"  height="71%">
+            <p class="title">Classic Royal Dining Set</p>
+            <p class="des">Luxury Dining Set - <br> from $1,000</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/WhatsAppImage2024-01-19at17.01.37.jpg?v=1705681622&width=400" width="90%" height="70%" alt="">
+            <p class="title">2 Seater Dining Table</p>
+            <p class="des">Classic Mini Dining Table - <br> from $250</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/981c8ddf-986b-476e-91f5-e9738886189a_2024-07-13T07_25_13.887Z.png?v=1720855518&width=400" width="90%" alt="">
+            <p class="title">Modern Seat Dining Chair</p>
+            <p class="des">Normal Seat Dining Chair - <br> from $200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>  
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/NewProject-2024-07-18T160112.353.png?v=1721314894&width=400" width="90%" alt="">
+            <p class="title">Moder Marble Dining Set</p>
+            <p class="des">Classic Dining Table - <br> from $1,000</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/products/WhatsAppImage2023-04-19at5.57.22PM.jpg?v=1681982209&width=600" width="90%" alt="">
+            <p class="title">Cicra</p>
+            <p class="des">Casual Chair - <br> from $150</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/Modern_Dining_Chair_Beige.png?v=1728757063&width=400" width="90%" alt="">
+            <p class="title">Modern Dining Chair(One Unit)</p>
+            <p class="des">Casual Dining Chairs for partners - <br> from $600</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://hogfurniture.co/cdn/shop/files/NewProject-2024-08-27T102703.601.png?v=1724750852&width=400" width="90%" alt="">
+            <p class="title">Classic Dining Table & Chair</p>
+            <p class="des">Classic Dining Chairs for partners - <br>  from $900</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+      </section>
+
+      <section id="Chandelier" class="products">
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-10-light-modern-sputnik-sunburst-geometric-chandelier-chandelier-black-539101.jpg?crop=center&height=360&v=1712564886&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">10-Light Modern Sputnik Sunburst Geometric Chandelier - br from $900</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-12-light-joyful-rainbow-starburst-sputnik-chandelier-chandelier-rainbow-brass-605813.jpg?crop=center&height=360&v=1715244795&width=360" alt="">
+            <p class="title">Luxuary Chandelier<p>
+            <p class="des">12-Light Joyful Rainbow Starburst Sputnik Chandelier - <br> from $900</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-12-light-dimmable-rainbow-starburst-sputnik-chandelier-chandelier-rainbow-brass-717262.jpg?crop=center&height=360&v=1721462321&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">12-Light Dimmable Rainbow Starburst Sputnik Chandelier - <br> from $900</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-2440-light-modern-large-sputnik-firework-chandelier-chandelier-40-light-660164.jpg?crop=center&height=360&v=1731885722&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">2440-Light Modern Large Sputnik Firework Chandelier - <br> from $950</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-13-light-cluster-opal-glass-bubble-chandelier-chandelier-brass-795600.jpg?crop=center&height=360&v=1709077702&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">13-Light Cluster Opal Glass Bubble Chandelier - <br> from $800</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-luxury-glam-large-cluster-ribbed-glass-bubble-linear-entry-chandelier-chandelier-brass-359839.jpg?crop=center&height=360&v=1708331991&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">Luxury Glam Large Cluster Ribbed Glass Bubble Linear Entry Chandelier - <br> from $1,200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-glam-luxury-large-cluster-grape-ribbed-glass-bubble-entry-chandelier-chandelier-brass-203014.jpg?crop=center&height=360&v=1708331993&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">Glam Luxury Large Cluster Grape Ribbed Glass Bubble Entry Chandelier - <br> from $1,200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-luxury-large-cluster-cloud-bubble-chandelier-ribbed-glass-brass-hanging-light-chandelier-12-light-458471.jpg?crop=center&height=360&v=1742460101&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">Luxury Large Cluster Cloud Bubble Chandelier - <br> from $1,300</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-8-light-linear-opal-glass-chandelier-chandelier-black-363961.jpg?crop=center&height=360&v=1739943939&width=360h" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">8 Light Linear Opal Glass Chandelier - <br> from $1,200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-10-light-bubble-opal-glass-globe-chandelier-chandelier-brass-10-light-966268.jpg?crop=center&height=360&v=1731885722&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">10 Light Bubble Opal Glass Globe Chandelier - <br> from $1,200</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/products/thehouselights-15-light-blue-branch-sputnik-chandelier-chandelier-gold-736562.jpg?crop=center&height=360&v=1704188795&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">15 Light Blue Branch Sputnik Chandelier - <br> from $1,500</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+        
+        <div>
+            <img src="https://thehouselights.com/cdn/shop/files/thehouselights-15-light-sputnik-modern-sphere-chandelier-chandelier-black-220194.jpg?crop=center&height=360&v=1719478517&width=360" alt="">
+            <p class="title">Luxuary Chandelier</p>
+            <p class="des">15 Light Sputnik Modern Sphere Chandelier - <br> from $1,000</p>
+            <button class="add"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="false" focusable="false" width="25" height="25"><path d="M128.64 112.341333a64 64 0 0 0 52.138667 73.984l15.04 2.602667a10.666667 10.666667 0 0 1 8.810666 9.642667l34.389334 427.306666a74.666667 74.666667 0 0 0 74.453333 68.693334h460.373333a74.666667 74.666667 0 0 0 73.578667-62.08l50.24-293.226667a74.666667 74.666667 0 0 0-73.6-87.274667H273.130667l-4.693334-58.56A74.666667 74.666667 0 0 0 206.72 125.866667l-78.08-13.504z m149.653333 203.648h545.770667a10.666667 10.666667 0 0 1 10.517333 12.458667l-50.24 293.248a10.666667 10.666667 0 0 1-10.517333 8.874667h-460.373333a10.666667 10.666667 0 0 1-10.624-9.813334l-24.533334-304.768z m2.112 484.010667a53.333333 53.333333 0 1 0 106.666667 0 53.333333 53.333333 0 0 0-106.666667 0zM736 853.333333a53.333333 53.333333 0 1 1 0-106.666666 53.333333 53.333333 0 0 1 0 106.666666z" fill="#191919"></path></svg> ADD TO CART</button>
+        </div>
+     
+    </section>
+</body>
+</html>
