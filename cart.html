@@ -58,7 +58,7 @@
     const cartCount = document.getElementById("cartCount");
 
     function displayCart() {
-      cartList.innerHTML = ""; // Clear previous items
+      cartList.innerHTML = "";
       let total = 0;
 
       cart.forEach((item, index) => {
@@ -109,8 +109,8 @@
       }
 
       const orders = JSON.parse(localStorage.getItem("orders")) || [];
-      const currentDate = new Date(); // Now properly declared
-      const formattedDate = currentDate.toLocaleString(); // Format nicely
+      const currentDate = new Date(); 
+      const formattedDate = currentDate.toLocaleString(); 
 
       orders.push({
         items: cart,
@@ -135,7 +135,7 @@
       }
     }
 
-    // Initial call
+
     displayCart();
   </script>
 

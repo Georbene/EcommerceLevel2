@@ -123,7 +123,7 @@
 const form = document.getElementById("productForm");
 const productList = document.getElementById("productList");
 
-let editingIndex = null; // Track if we're editing
+let editingIndex = null;
 
 function displayProducts() {
   productList.innerHTML = "";
@@ -144,11 +144,9 @@ function displayProducts() {
 
 function saveProduct(name, price, description, image) {
   if (editingIndex !== null) {
-    // Update existing product
     products[editingIndex] = { name, price, description, image };
     editingIndex = null;
   } else {
-    // Add new product
     products.push({ name, price, description, image });
   }
 
@@ -196,7 +194,6 @@ function deleteProduct(index) {
   displayProducts();
 }
 
-// Start
 displayProducts();
 
 </script>
